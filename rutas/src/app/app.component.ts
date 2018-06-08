@@ -8,11 +8,19 @@ import {Router} from "@angular/router";
 })
 export class AppComponent {
   title = 'app';
-  constructor(private _router:Router){}
+
+  variableEstas = 'estas';
+
+  constructor(private _router: Router) {
+  }
+
   irAInfo() {
-    const url = ['/inicio'];
+    const url = [
+      '/inicio', 'hola', 'como', 'estas'
+    ];
     this._router.navigate(url);
   }
+
   irAFAQ() {
     const url = ['/faq'];
     this._router.navigate(url);

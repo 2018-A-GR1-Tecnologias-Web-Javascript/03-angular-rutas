@@ -6,7 +6,15 @@
     <div class="col-sm-6" style="background-color: deepskyblue">
       <ul>
         <li>
-          <a routerLink="/inicio">
+          <a [routerLink]="
+          [
+          '/inicio',
+          'hola',
+          'como',
+          variableEstas
+          ]">
+
+
             <h3>Inicio</h3>
           </a>
         </li>
