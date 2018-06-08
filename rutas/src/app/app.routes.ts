@@ -17,7 +17,12 @@ export const RUTAS_APP: Routes = [
       {
         path: 'permisos',
         component:RutaIniPermisosComponent
-      }
+      },
+      {
+        path: '',
+        redirectTo: 'usuario',
+        pathMatch: 'full'
+      },
     ]
   },
   {
