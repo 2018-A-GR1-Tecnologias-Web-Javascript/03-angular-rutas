@@ -16,7 +16,7 @@ export class AppComponent {
 
   irAInfo() {
     const url = [
-      '/inicio', 'hola', 'como', 'estas'
+      'activo', 'hola', 'como', 'estas'
     ];
     this._router.navigate(url);
   }
