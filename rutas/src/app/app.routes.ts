@@ -6,10 +6,14 @@ const RUTAS_APP: Routes = [
     path: 'inicio',
     component: RutaInicioComponent
   },
+  
   {
     path: '',
-    redirectTo: '/heroes',
+    redirectTo: '/inicio',
     pathMatch: 'full'
   },
+
+
+
   {path: '**', component: PageNotFoundComponent}
 ];
