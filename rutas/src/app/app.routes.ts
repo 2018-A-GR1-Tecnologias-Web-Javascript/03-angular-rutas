@@ -4,19 +4,23 @@ import {RutaNoEncontradaComponent} from "./ruta-no-encontrada/ruta-no-encontrada
 import {RutaFAQComponent} from "./ruta-faq/ruta-faq.component";
 import {RutaIniUsuarioComponent} from "./ruta-ini-usuario/ruta-ini-usuario.component";
 import {RutaIniPermisosComponent} from "./ruta-ini-permisos/ruta-ini-permisos.component";
+import {AutorizacionService} from "./autorizacion.service";
 
 export const RUTAS_APP: Routes = [
   {
     path: 'inicio/hola/como/estas',
     component: RutaInicioComponent,
-    children:[
+    children: [
       {
-        path: 'usuario/:id/activo/:estaActivo',
-        component:RutaIniUsuarioComponent
+        path: 'usuario/:pepito/activo/:estaActivo',
+        component: RutaIniUsuarioComponent
       },
       {
         path: 'permisos',
-        component:RutaIniPermisosComponent
+        component: RutaIniPermisosComponent,
+        canActivate: [
+          AutorizacionService
+        ]
       },
       {
         path: '',
@@ -27,7 +31,10 @@ export const RUTAS_APP: Routes = [
   },
   {
     path: 'faq',
-    component: RutaFAQComponent
+    component: RutaFAQComponent,
+    canActivate: [
+      // AutorizacionService
+    ],
   },
   {
     path: '',
